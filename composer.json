@@ -1,0 +1,23 @@
+{
+    "name": "lucasdavies/textlocal-demo-app",
+    "description": "A demo app that demonstrates usage of the Textlocal service, written using Silex.",
+    "type": "project",
+    "keywords": [
+        "textlocal",
+        "silex"
+    ],
+    "homepage": "https://github.com/lucasdavies/textlocal-demo-app",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Davies",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "silex/silex": "^2.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.1"
+    }
+}
