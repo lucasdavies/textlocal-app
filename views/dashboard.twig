@@ -1,0 +1,16 @@
+{% extends layout %}
+
+{% block content %}
+
+<p class="lead">
+    Intro&hellip;
+</p>
+
+<div class="list-group">
+    <a href="{{ url('compose') }}" class="list-group-item">Compose</a>
+    <a href="{{ url('inbox') }}" class="list-group-item">Inbox</a>
+    <a href="{{ url('sent') }}" class="list-group-item">Sent</a>
+    <a href="{{ url('contacts') }}" class="list-group-item">Contacts</a>
+</div>
+
+{% endblock %}
