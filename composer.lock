@@ -4,21 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a5d516d74031bbf394b87f80c96393af",
-    "content-hash": "91979161e539c3800009a15013ee8ec0",
+    "hash": "768218759fe128da5c4bbfff360a95dd",
+    "content-hash": "317cd8905018c5c47a16e71eb03a1a12",
     "packages": [
         {
-            "name": "pimple/pimple",
-            "version": "v3.0.2",
+            "name": "lucasdavies/textlocal-silex-provider",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a"
+                "url": "https://github.com/lucasdavies/silex-textlocal-service-provider.git",
+                "reference": "3a56daf5485d503f49eb9646d66ee433c41076f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a30f7d6e57565a2e1a316e1baf2a483f788b258a",
-                "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a",
+                "url": "https://api.github.com/repos/lucasdavies/silex-textlocal-service-provider/zipball/3a56daf5485d503f49eb9646d66ee433c41076f6",
+                "reference": "3a56daf5485d503f49eb9646d66ee433c41076f6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LucasDavies\\Silex\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Davies",
+                    "email": "lucasdavies@gmail.com"
+                }
+            ],
+            "description": "A Textlocal Service Provider for Silex.",
+            "homepage": "https://github.com/lucasdavies/silex-textlocal-service-provider",
+            "keywords": [
+                "silex",
+                "textlocal"
+            ],
+            "time": "2016-06-25 22:16:55"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "64e0f8320639b434baa073a40dd1e037e3286555"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/64e0f8320639b434baa073a40dd1e037e3286555",
+                "reference": "64e0f8320639b434baa073a40dd1e037e3286555",
                 "shasum": ""
             },
             "require": {
@@ -51,26 +89,34 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2015-09-11 15:10:35"
+            "time": "2015-09-11 15:11:22"
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d8e60a5619fff77f9669da8997697443ef1a1d7e",
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -84,25 +130,26 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-01-06 21:40:42"
         },
         {
             "name": "silex/silex",
-            "version": "v2.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Silex.git",
-                "reference": "7420ac96195ea7eb6f1e11dc273be49359dd50ad"
+                "reference": "efe70d6a331ca7e8af8c1f6704063435040e35ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Silex/zipball/7420ac96195ea7eb6f1e11dc273be49359dd50ad",
-                "reference": "7420ac96195ea7eb6f1e11dc273be49359dd50ad",
+                "url": "https://api.github.com/repos/silexphp/Silex/zipball/efe70d6a331ca7e8af8c1f6704063435040e35ee",
+                "reference": "efe70d6a331ca7e8af8c1f6704063435040e35ee",
                 "shasum": ""
             },
             "require": {
@@ -174,20 +221,20 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2016-06-14 09:27:51"
+            "time": "2016-06-20 16:04:18"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "26786e21ee0344f99629215ead5f0d6f18cdc267"
+                "reference": "0abd031b28883e4705c555ed649548cb465b7ae1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/26786e21ee0344f99629215ead5f0d6f18cdc267",
-                "reference": "26786e21ee0344f99629215ead5f0d6f18cdc267",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/0abd031b28883e4705c555ed649548cb465b7ae1",
+                "reference": "0abd031b28883e4705c555ed649548cb465b7ae1",
                 "shasum": ""
             },
             "require": {
@@ -204,7 +251,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -231,20 +278,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-06 15:08:54"
+            "time": "2016-06-21 06:43:40"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "f5b7563f67779c6d3d5370e23448e707c858df3e"
+                "reference": "f9f43038cf91802bbaf87464973e724c6b6fb68f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f5b7563f67779c6d3d5370e23448e707c858df3e",
-                "reference": "f5b7563f67779c6d3d5370e23448e707c858df3e",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f9f43038cf91802bbaf87464973e724c6b6fb68f",
+                "reference": "f9f43038cf91802bbaf87464973e724c6b6fb68f",
                 "shasum": ""
             },
             "require": {
@@ -264,7 +311,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -291,20 +338,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-06 11:42:41"
+            "time": "2016-06-06 11:53:30"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "5fa10139fe520561e313cc2a6cea1e44a71f36ce"
+                "reference": "ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5fa10139fe520561e313cc2a6cea1e44a71f36ce",
-                "reference": "5fa10139fe520561e313cc2a6cea1e44a71f36ce",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b",
+                "reference": "ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b",
                 "shasum": ""
             },
             "require": {
@@ -317,7 +364,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -344,20 +391,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-14 11:18:07"
+            "time": "2016-06-23 13:32:24"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "2a501e4263dbd0a08569e4589bfa297b578d0ecc"
+                "reference": "2d59b33b0431c6026c94a6225783f5b5cee12d0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2a501e4263dbd0a08569e4589bfa297b578d0ecc",
-                "reference": "2a501e4263dbd0a08569e4589bfa297b578d0ecc",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2d59b33b0431c6026c94a6225783f5b5cee12d0a",
+                "reference": "2d59b33b0431c6026c94a6225783f5b5cee12d0a",
                 "shasum": ""
             },
             "require": {
@@ -399,7 +446,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -426,20 +473,20 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-15 05:59:04"
+            "time": "2016-06-21 06:41:01"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594"
+                "reference": "f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d",
+                "reference": "f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d",
                 "shasum": ""
             },
             "require": {
@@ -485,20 +532,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-05-18 14:26:46"
+            "time": "2016-06-07 08:38:42"
         },
         {
             "name": "symfony/routing",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "e52818e421659dd58a4eb3d439064fb3c2480999"
+                "reference": "f2b42a042aecc8c1de02a48667abaf87070eb86a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/e52818e421659dd58a4eb3d439064fb3c2480999",
-                "reference": "e52818e421659dd58a4eb3d439064fb3c2480999",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/f2b42a042aecc8c1de02a48667abaf87070eb86a",
+                "reference": "f2b42a042aecc8c1de02a48667abaf87070eb86a",
                 "shasum": ""
             },
             "require": {
@@ -527,7 +574,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -560,22 +607,72 @@
                 "uri",
                 "url"
             ],
-            "time": "2016-05-30 06:58:39"
+            "time": "2016-06-23 12:28:23"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "8c9a0b50a1dbd69dc7c73a492d8825cccc147c7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8c9a0b50a1dbd69dc7c73a492d8825cccc147c7f",
+                "reference": "8c9a0b50a1dbd69dc7c73a492d8825cccc147c7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2016-06-14 16:39:40"
         }
     ],
     "packages-dev": [
         {
             "name": "symfony/var-dumper",
-            "version": "v3.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "436195b421e8c0493ca3e390c1fbecd8ee08c546"
+                "reference": "511371711de41320613fbea0d16e8580dc628949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/436195b421e8c0493ca3e390c1fbecd8ee08c546",
-                "reference": "436195b421e8c0493ca3e390c1fbecd8ee08c546",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/511371711de41320613fbea0d16e8580dc628949",
+                "reference": "511371711de41320613fbea0d16e8580dc628949",
                 "shasum": ""
             },
             "require": {
@@ -591,7 +688,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -625,12 +722,14 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-05-24 10:06:56"
+            "time": "2016-06-23 09:26:38"
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "lucasdavies/textlocal-silex-provider": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
