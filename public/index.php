@@ -20,6 +20,14 @@ $app['debug'] = filter_var(getenv('DEBUG'), FILTER_VALIDATE_BOOLEAN) ?: false;
 // Session
 $app->register(new Silex\Provider\SessionServiceProvider);
 
+// Doctrine DBAL
+$app->register(new Silex\Provider\DoctrineServiceProvider, [
+    'db.options' => [
+        'driver'   => 'pdo_sqlite',
+        'path'     => __DIR__ . '/../demo.db',
+    ],
+]);
+
 // Twig templating engine
 $app->register(new Silex\Provider\TwigServiceProvider, [
     'twig.path' => __DIR__ . '/../views',
@@ -59,8 +67,6 @@ $app->post('/send', function (Request $request) use ($app) {
     $recipients = $request->get('recipients');
     $message = $request->get('message');
     
-    // Error handling...
-    
     // Only expect digits
     $recipients = explode(',', $recipients);
     $recipients = preg_replace('/\s+/', '', $recipients);
@@ -71,38 +77,75 @@ $app->post('/send', function (Request $request) use ($app) {
     $message = trim($message);
     
     // Send SMS
-    $app['textlocal']->sendSms(
-        $recipients,
-        $message,
-        'Textlocal Demo App'
-    );
+    try {
+        $app['textlocal']->sendSms(
+            $recipients,
+            $message,
+            'Textlocal Demo App',
+            null,
+            true
+        );
+    } catch (Exception $e) {
+        $app['session']->getFlashBag()->add('error', 'There was a problem sending your message. Please try again.');
+        return $app->redirect('/');
+    }
+    
+    // Save message
+    $app['db']->insert('messages', ['message' => $message]);
+    $message_id = $app['db']->lastInsertId();
+    
+    // Save recipients
+    foreach ($recipients as $recipient) {
+        $app['db']->insert('message_recipients', [
+            'message_id' => $message_id,
+            'number'     => $recipient,
+        ]);
+    }
     
     $app['session']->getFlashBag()->add('success', 'Message successfully sent.');
     return $app->redirect('/');
 })->bind('send');
 
-$app->get('/inbox', function () use ($app) {
-    return $app['twig']->render('inbox.twig', [
-        'title' => 'Inbox',
-    ]);
-})->bind('inbox');
-
 $app->get('/sent', function () use ($app) {
+    // Get sent messages
+    $query = 'SELECT
+                  messages.id,
+                  GROUP_CONCAT(message_recipients.number, ", ") recipients,
+                  messages.sent
+              FROM messages
+              INNER JOIN message_recipients ON message_recipients.message_id = messages.id
+              GROUP BY messages.id
+              ORDER BY sent DESC';
+              
+    $messages = $app['db']->fetchAll($query);
+    
     return $app['twig']->render('sent.twig', [
-        'title' => 'Sent',
+        'title'    => 'Sent',
+        'messages' => $messages
     ]);
 })->bind('sent');
 
 $app->get('/message/{id}', function ($id) use ($app) {
+    $query = 'SELECT
+                  messages.id,
+                  GROUP_CONCAT(message_recipients.number, ", ") recipients,
+                  messages.message,
+                  messages.sent
+              FROM messages
+              INNER JOIN message_recipients ON message_recipients.message_id = messages.id
+              WHERE messages.id = ?
+              GROUP BY messages.id';
+              
+    $message = $app['db']->fetchAssoc($query, [$id]);
+    
+    if (! $message) {
+        return $app->redirect('/');
+    }
+    
     return $app['twig']->render('message.twig', [
-        'title' => 'Message',
+        'title'   => 'Message',
+        'message' => $message
     ]);
 })->assert('id', '\d+')->bind('message');
-
-$app->get('/contacts', function () use ($app) {
-    return $app['twig']->render('contacts.twig', [
-        'title' => 'Contacts',
-    ]);
-})->bind('contacts');
 
 $app->run();

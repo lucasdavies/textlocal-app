@@ -2,20 +2,21 @@
 
 {% block content %}
 
-<p class="lead">
-    Intro&hellip;
-</p>
-
 <form action="{{ url('send') }}" method="POST">
     <div class="form-group">
         <label for="recipients">Recipient Number(s)</label>
-        <input type="text" name="recipients" class="form-control" id="recipients" placeholder="07123456789, 07234567890" required>
+        <input type="text" name="recipients" class="form-control" id="recipients" placeholder="07123456789, 07234567890" >
     </div>
     <div class="form-group">
         <label for="message">Message</label>
-        <textarea name="message" id="message" rows="5" class="form-control" placeholder="Please enter a message" required></textarea>
+        <textarea name="message" id="message" rows="5" class="form-control" placeholder="Please enter a message" ></textarea>
     </div>
     <button type="submit" class="btn btn-success">Send</button>
 </form>
+
+<p>
+    <br>
+    <a href="{{ url('dashboard') }}">&larr; Return to Dashboard</a>
+</p>
 
 {% endblock %}

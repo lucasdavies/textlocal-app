@@ -2,8 +2,24 @@
 
 {% block content %}
 
-<p class="lead">
-    Intro&hellip;
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{ message.recipients }}
+        </h3>
+    </div>
+    
+    <div class="panel-body">
+        {{ message.message|e }}
+    </div>
+    
+    <div class="panel-footer">
+        {{ message.sent }}
+    </div>
+</div>
+
+<p>
+    <a href="{{ url('sent') }}">&larr; Return to Sent</a>
 </p>
 
 {% endblock %}

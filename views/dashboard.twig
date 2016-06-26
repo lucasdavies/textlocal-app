@@ -6,15 +6,17 @@
     <div class="alert alert-success" role="alert">{{ message }}</div>
 {% endfor %}
 
+{% for message in app.session.flashbag.get('error') %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+{% endfor %}
+
 <p class="lead">
-    Intro&hellip;
+    Welcome to your dashboard.
 </p>
 
 <div class="list-group">
     <a href="{{ url('compose') }}" class="list-group-item">Compose</a>
-    <a href="{{ url('inbox') }}" class="list-group-item">Inbox</a>
     <a href="{{ url('sent') }}" class="list-group-item">Sent</a>
-    <a href="{{ url('contacts') }}" class="list-group-item">Contacts</a>
 </div>
 
 {% endblock %}

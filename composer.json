@@ -19,10 +19,19 @@
         "lucasdavies/textlocal-silex-provider": "dev-master",
         "vlucas/phpdotenv": "^2.3",
         "twig/twig": "^1.24",
-        "symfony/twig-bridge": "^3.1"
+        "symfony/twig-bridge": "^3.1",
+        "doctrine/dbal": "^2.5",
+        "robmorgan/phinx": "^0.6.2"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.1"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-create-project-cmd": [
+            "touch ./demo.db",
+            "cp .env.example .env",
+            "php vendor/bin/phinx migrate"
+        ]
+    }
 }

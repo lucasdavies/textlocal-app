@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Textlocal Demo App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -26,9 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
                     <li><a href="{{ url('compose') }}">Compose</a></li>
-                    <li><a href="{{ url('inbox') }}">Inbox</a></li>
                     <li><a href="{{ url('sent') }}">Sent</a></li>
-                    <li><a href="{{ url('contacts') }}">Contacts</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
