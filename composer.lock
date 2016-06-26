@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fcb0e743007b11a6af2031e04837cb10",
+    "hash": "cdfd637e008b1759b37804085811c1f3",
     "content-hash": "28b94573d3be963c619c5879532b8a98",
     "packages": [
         {
@@ -481,12 +481,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucasdavies/silex-textlocal-service-provider.git",
-                "reference": "3a56daf5485d503f49eb9646d66ee433c41076f6"
+                "reference": "90d1dd47f1affd52f4c42c807662da32aa244ce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucasdavies/silex-textlocal-service-provider/zipball/3a56daf5485d503f49eb9646d66ee433c41076f6",
-                "reference": "3a56daf5485d503f49eb9646d66ee433c41076f6",
+                "url": "https://api.github.com/repos/lucasdavies/silex-textlocal-service-provider/zipball/90d1dd47f1affd52f4c42c807662da32aa244ce8",
+                "reference": "90d1dd47f1affd52f4c42c807662da32aa244ce8",
                 "shasum": ""
             },
             "type": "library",
@@ -511,7 +511,7 @@
                 "silex",
                 "textlocal"
             ],
-            "time": "2016-06-25 22:16:55"
+            "time": "2016-06-26 21:46:38"
         },
         {
             "name": "pimple/pimple",
@@ -1044,12 +1044,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b"
+                "reference": "d9e293ae6e6dd2f35a0a8d2827821f5693deb141"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b",
-                "reference": "ed9d83a6a0979bb8d8f0933df4b346bf80d0ef5b",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d9e293ae6e6dd2f35a0a8d2827821f5693deb141",
+                "reference": "d9e293ae6e6dd2f35a0a8d2827821f5693deb141",
                 "shasum": ""
             },
             "require": {
@@ -1089,7 +1089,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-23 13:32:24"
+            "time": "2016-06-23 13:33:17"
         },
         {
             "name": "symfony/http-kernel",
